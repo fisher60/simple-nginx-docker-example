@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:1.23.3-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - "./templates:/etc/nginx/templates"
+      - "./nginx.conf:/etc/nginx/nginx.conf"
+      - ./static_site:/usr/share/nginx/html
